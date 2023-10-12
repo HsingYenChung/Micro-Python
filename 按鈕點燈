@@ -1,0 +1,15 @@
+from machine import Pin
+from gpb import delay,LED
+
+btn=Pin(2,Pin.IN)
+led=Pin(6,Pin.OUT)
+
+while True:
+if btn.value()==0:
+led.off()
+print(btn.value())
+delay(500)
+else:
+led.on()
+print(btn.value())
+delay(500)
